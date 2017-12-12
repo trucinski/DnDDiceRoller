@@ -17,6 +17,7 @@ namespace DnDDiceRoller
         public string alphaFirstCheck = "one";
         public string singleDicePrompt = "Which die do you need to roll?" +
                     "\nPress enter to roll again or type quit to return to beginning.";
+        public string invalidSingleNonInt = "Non-Number Detected. Try Again.";
 
         public string numericSecondCheck = "2";
         public string alphaSecondCheck = "multiple";

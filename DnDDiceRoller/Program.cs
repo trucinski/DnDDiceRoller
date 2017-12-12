@@ -24,8 +24,19 @@ namespace DnDDiceRoller
                 if (choice.Equals(_constants.numericFirstCheck) || choice.Equals(_constants.alphaFirstCheck))
                 {
                    Console.WriteLine(_constants.singleDicePrompt);
-                    int dieChoice = Convert.ToInt32(Console.ReadLine());
-                       bool rollAgain = true;
+                    bool parsed = false;
+                    int dieChoice = 0;
+                    do
+                    {                        
+                        parsed = Int32.TryParse(Console.ReadLine(), out dieChoice);
+                        if (!parsed)
+                        {
+                            Console.WriteLine(_constants.invalidSingleNonInt);
+                        }
+
+                    } while (!parsed);
+
+                    bool rollAgain = true;
     
                        do
                        {                  
@@ -38,7 +49,6 @@ namespace DnDDiceRoller
                             }
 
                        } while (rollAgain);
-
 
                 }
 
