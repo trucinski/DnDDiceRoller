@@ -11,7 +11,8 @@ namespace DnDDiceRoller
         public string startProgPrompt = "How many dice do you need to roll?" +
                 "\n1 - One" +
                 "\n2 - Multiple" +
-                "\n3 - Quit";
+                "\n3 - Ability Scores" +
+                "\n4 - Quit";
 
         public string numericFirstCheck = "1";
         public string alphaFirstCheck = "one";
@@ -27,9 +28,12 @@ namespace DnDDiceRoller
         public string invalidMultiInputLength = "Invalid input length. Try again.";
         public string invalidMultiNonIntInput = "Non-Number Detected. Try Again.";
         public char inputSeparator = ',';
-        public string totalRollValue = "Total of rolls: {0}";
+        public string totalRollValue = "Total of rolls: {0}, {1} if resistant.";
 
-        public string numericQuitCheck = "3";
+        public string numericThirdCheck = "3";
+        public string alphaThirdCheck = "ability scores";
+
+        public string numericQuitCheck = "4";
         public string alphaQuitCheck = "quit";
         
     }

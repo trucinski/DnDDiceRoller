@@ -12,6 +12,7 @@ namespace DnDDiceRoller
         public static readonly Random _random = new Random();
         public static readonly Constants _constants = new Constants();
         public static readonly MultiRollInputer _multiRollInputer = new MultiRollInputer();
+        public static readonly AbilityScoresGenerator _abilityScoresGenerator = new AbilityScoresGenerator();
 
         static void Main(string[] args)
         {
@@ -105,7 +106,12 @@ namespace DnDDiceRoller
                         }
                     }
 
-                    Console.WriteLine(_constants.totalRollValue, totalRoll);
+                    Console.WriteLine(_constants.totalRollValue, totalRoll, totalRoll/2);
+                }
+
+            if (choice.Equals(_constants.numericThirdCheck) || choice.Equals(_constants.alphaThirdCheck))
+                {
+                    _abilityScoresGenerator.GenerateAbilityScores();
                 }
 
             if (choice.Equals(_constants.numericQuitCheck) || choice.Equals(_constants.alphaQuitCheck))
